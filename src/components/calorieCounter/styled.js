@@ -1,24 +1,30 @@
 import styled, { css } from "styled-components";
 
-const border = "1px solid hsl(0 0% 100% / 0.14)";
-const borderMuted = "1px solid hsl(0 0% 100% / 0.10)";
-const focusRing = "0 0 0 3px hsl(0 0% 100% / 0.15)";
+const border = "1px solid #2b3a4d";
+const borderMuted = "1px solid #34465c";
+const focusRing = "0 0 0 3px rgba(79, 209, 157, 0.22)";
 
 export const Styled = {
     Page: styled.div`
         min-height: 100dvh;
+        background: radial-gradient(circle at 90% 0%, #19372f 0, transparent 32%), #09121d;
     `,
     Container: styled.div`
-        max-width: 980px;
+        max-width: 1120px;
         margin: 0 auto;
-        padding: 32px 18px 56px;
+        padding: 30px 22px 64px;
     `,
     Header: styled.header`
         display: flex;
         justify-content: space-between;
         gap: 16px;
         align-items: end;
-        margin: 12px 0 18px;
+        margin: 8px 0 22px;
+        padding: 22px;
+        border: ${border};
+        border-radius: 22px;
+        background: rgba(17, 30, 44, 0.84);
+        box-shadow: 0 18px 45px rgba(0, 0, 0, .2);
     `,
     Title: styled.h1`
         font-size: clamp(28px, 3.5vw, 40px);
@@ -111,9 +117,9 @@ export const Styled = {
         opacity: 0.75;
     `,
     PrimaryButton: styled.button`
-        border: ${border};
-        background: transparent;
-        color: inherit;
+        border: 1px solid #4fd19d;
+        background: #4fd19d;
+        color: #06140f;
         padding: 10px 14px;
         border-radius: 10px;
         font-weight: 600;
@@ -132,8 +138,8 @@ export const Styled = {
     `,
     Button: styled.button`
         border: ${border};
-        background: transparent;
-        color: inherit;
+        background: #142536;
+        color: #e7f1f8;
         padding: 10px 14px;
         border-radius: 10px;
         cursor: pointer;
@@ -145,9 +151,9 @@ export const Styled = {
         }
     `,
     DangerButton: styled.button`
-        border: 1px solid hsl(0 70% 60% / 0.7);
-        background: transparent;
-        color: hsl(0 70% 70% / 0.9);
+        border: 1px solid #b96778;
+        background: #2a1a29;
+        color: #f0a4ae;
         padding: 10px 14px;
         border-radius: 10px;
         cursor: pointer;
