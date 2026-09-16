@@ -33,3 +33,7 @@ h5,
 h6 {
     font-family: "Antonio", sans-serif;
 }
+
+.site-footer { padding: 18px 22px 30px; text-align: center; color: #a8b6c5; font-size: 12px; }
+.site-footer a { color: #e7f1f8; font-weight: 600; }
+.site-footer nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 14px; margin-top: 9px; }
