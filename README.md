@@ -1,57 +1,40 @@
-# Calorie Counter (React + styled-components)
+# Calorie Counter
 
-![alt text](image.png)
+![Calorie Counter preview](screenshot.png)
 
-**Live Demo:** https://a2rp.github.io/calorie-counter/
-
-A clean, frontend-only Calorie Counter built with **React + styled-components**. Log meals, track daily calories vs goal, search, edit, and clear a day. Transparent UI that blends with a black/dark theme.
+A focused frontend calorie tracker for logging meals, comparing daily intake with a goal, and keeping data in the browser.
 
 ## Features
 
--   Add meals with **name, calories, type (Breakfast/Lunch/Dinner/Snack/Other), date**
--   **Daily total vs Goal** with % and remaining/over hint
--   **Date controls**: Prev / Today / Next
--   **Grouped by meal type**, quick search on the selected day
--   Edit & delete meals, **Clear Day** (with confirm)
--   **LocalStorage** persistence
--   **Custom confirm modal** (no portals)
--   Dark/black theme friendly (no background overrides)
+- Add, edit, search, group, and remove meals
+- Track daily calories against a configurable goal
+- Move between dates and clear a day with confirmation
+- Persist meal data with localStorage
+- Responsive layout with keyboard-friendly controls
 
-## Local Install
+## Tech stack
+
+React, Vite, styled-components, react-icons, and localStorage.
+
+## Run locally
 
 ```bash
-# 1) Clone the repo
-git clone https://github.com/a2rp/calorie-counter.git
-cd calorie-counter
-
-# 2) Install dependencies
-npm i
-
-# 3) Run dev server
+npm install
 npm run dev
 ```
 
-## Author
+## Deployment
 
-Ashish Ranjan, Full-Stack Web Developer
+```bash
+npm run build
+npm run deploy
+```
 
-- Portfolio: [ashishranjan.net](https://www.ashishranjan.net/)
-- GitHub: [a2rp](https://github.com/a2rp)
-- CodePen: [ash1198](https://codepen.io/ash1198)
-- LinkedIn: [aashishranjan](https://www.linkedin.com/in/aashishranjan)
-- Facebook: [theash.ashish](https://www.facebook.com/theash.ashish/)
-- YouTube: [Ashish Ranjan](https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1)
-- Email: [ash.ranjan09@gmail.com](mailto:ash.ranjan09@gmail.com)
-
-## Support
-
-- [Support page](https://a2rp-donation-page.netlify.app/)
-- [Buy Me a Coffee](https://buymeacoffee.com/a2rp)
-- [Patreon](https://www.patreon.com/a2rp)
+Live app: [Calorie Counter](https://a2rp.github.io/calorie-counter/)
 
 ## Links
 
-- Portfolio: [https://www.ashishranjan.net](https://www.ashishranjan.net)
+- Portfolio: [https://www.ashishranjan.net/](https://www.ashishranjan.net/)
 - GitHub: [https://github.com/a2rp](https://github.com/a2rp)
 - CodePen: [https://codepen.io/ash1198](https://codepen.io/ash1198)
 - LinkedIn: [https://www.linkedin.com/in/aashishranjan](https://www.linkedin.com/in/aashishranjan)
@@ -62,5 +45,5 @@ Ashish Ranjan, Full-Stack Web Developer
 ## Support
 
 - Support: [https://a2rp-donation-page.netlify.app/](https://a2rp-donation-page.netlify.app/)
-- Buy Me A Coffee: [https://buymeacoffee.com/a2rp](https://buymeacoffee.com/a2rp)
-- Patreon: [https://patreon.com/a2rp](https://patreon.com/a2rp)
+- Buy Me a Coffee: [https://buymeacoffee.com/a2rp](https://buymeacoffee.com/a2rp)
+- Patreon: [https://www.patreon.com/a2rp](https://www.patreon.com/a2rp)
