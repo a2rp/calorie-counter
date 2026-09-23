@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
+import { FiEdit2, FiTrash2 } from "react-icons/fi";
 import { Styled } from "./styled";
 
 const STORAGE_KEY = "calorie-counter.v1";
@@ -62,7 +63,14 @@ export default function CalorieCounter() {
     const handleConfirm = () => { const fn = confirm?.onConfirm; setConfirm(null); if (typeof fn === "function") fn(); };
     useEffect(() => {
         if (!confirm) return;
-        const onKey = (e) => { if (e.key === "Escape") setConfirm(null); if (e.key === "Enter") handleConfirm(); };
+        const onKey = (e) => {
+            if (e.key === "Escape") setConfirm(null);
+            if (e.key === "Enter") {
+                const fn = confirm?.onConfirm;
+                setConfirm(null);
+                if (typeof fn === "function") fn();
+            }
+        };
         document.addEventListener("keydown", onKey);
         return () => document.removeEventListener("keydown", onKey);
     }, [confirm]);
@@ -289,7 +297,7 @@ export default function CalorieCounter() {
                                         </Styled.ItemLeft>
 
                                         <Styled.ItemRight>
-                                            <Styled.IconButton onClick={() => startEdit(m.id)} aria-label="Edit">✏️</Styled.IconButton>
+                                            <Styled.IconButton type="button" onClick={() => startEdit(m.id)} aria-label="Edit" title="Edit"><FiEdit2 aria-hidden="true" /></Styled.IconButton>
                                             <Styled.IconButton
                                                 onClick={() =>
                                                     askConfirm({
@@ -300,9 +308,11 @@ export default function CalorieCounter() {
                                                         onConfirm: () => removeMeal(m.id),
                                                     })
                                                 }
+                                                type="button"
                                                 aria-label="Delete"
+                                                title="Delete"
                                             >
-                                                🗑️
+                                                <FiTrash2 aria-hidden="true" />
                                             </Styled.IconButton>
                                         </Styled.ItemRight>
                                     </Styled.Item>
